@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Explorer</title>
+    <style>
+        article{
+            border: 2px solid tomato;
+            border-radius: 20px;
+            margin: 10px;
+            padding: 10px;
+        }
+        .special h3{
+
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <section>
+            <h3>Dom Explorer</h3>
+            <p id="first">first <span style="background-color:black;">Lorem, ipsum.</span> paragraph</p>
+            <p>second paragraph</p>
+            <p>third paragraph</p>
+        </section>
+        <section>
+            <article class="special">
+                <h3 title="secondBest">article-1</h3>
+                <p class="author">author-1</p>
+                <p class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores modi nihil iure quisquam harum numquam vel quaerat eum aut perspiciatis. At dicta deleniti quod natus molestias sequi culpa fuga quia?</p>
+            </article>
+            <article>
+                <h3>article-2</h3>
+                <p title="I am the best writer" class="author" id="bestSeller">author-2</p>
+                <p class="description">Officia eveniet exercitationem repellendus quis quia nobis culpa iure doloribus? Doloribus veritatis perferendis laudantium adipisci, culpa, nostrum dignissimos, animi aut enim consectetur impedit vero nulla? Sint reiciendis eos commodi animi?</p>
+            </article>
+            <article class="special">
+                <h3>article-3</h3>
+                <p class="author">author-3</p>
+                <p class="description">Nemo facere beatae rerum provident esse laborum qui, dolorum, laboriosam distinctio ullam, maiores ipsam tenetur officiis! Animi enim consequatur ducimus expedita! Nobis rem inventore cupiditate magnam saepe distinctio neque voluptas.</p>
+            </article>
+        </section>
+    </main>
+    <script>
+        document.body.style.backgroundColor='tomato';
+        var first = document.getElementById('first');
+        first.style.backgroundColor = 'yellow';
+        first.style.color = 'green';
+        first.style.fontSize = '25px';
+        // var author = document.getElementsByClassName('author');
+        var author = document.querySelectorAll('.special h3');
+        for (i = 0; i < author.length; i++) {
+            var element = author[i];
+            console.log(element);
+            element.innerHTML='writer-'+(i+1);
+            element.setAttribute('title','All are same');
+            element.style.backgroundColor='green';
+            element.style.margin='10px';
+            
+        }
+    </script>
+</body>
+</html>

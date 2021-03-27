@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h1::before{
+            content: 'hello ';
+            color: blue;
+            background-color: burlywood;
+            font-size: 12px;
+        }
+        .special-effect::after{
+            content: 'bye';
+            color: coral;
+            background-color: darkgreen;
+            font-family: cursive;
+            font-size: small;
+        }
+        body{
+            counter-reset: section;           /* Set a counter named 'section', and its initial value is 0. */
+        }
+        p::before{
+            counter-increment: section;          /* Increment the value of section counter by 1 */
+            content: 'No.' counter(section)": ";   /* Display the word 'Section ', the value of
+                                                   section counter, and a colon before the content
+                                                   of each h3 */
+        }
+        p::after{
+            content: '❤️';
+        }
+    </style>
+</head>
+<body>
+    <h1>Pseudo-class</h1>
+    <h1 class="special-effect">Normal class</h1>
+    <h1 class="special-effect">Another class</h1>
+    <input name="Email" type="text">
+    <br>
+    <input name="password" type="text">
+    
+        <p>Salam</p>
+        <p>Barkat</p>
+        <p>Jabbar</p>
+        <p>Rafique</p>
+        <p>Shafik</p>
+
+    <a href="https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.RandomForestClassifier.html">Random</a>
+    <a href="https://www.google.com/search?q=google+translator&oq=goo&aqs=chrome.1.69i57j35i39l2j0i131i433j69i60l3j69i65.2039j0j7&sourcehd=chrome&ie=UTF-8">translator</a>
+</body>
+</html>

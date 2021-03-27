@@ -1,0 +1,6 @@
+When to use function?
+
+1.For specific task
+2.For DRYing the code
+3.To do atomic task
+4.To organize the code 

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Explorer</title>
+    <style>
+        article{
+            border: 2px solid tomato;
+            border-radius: 20px;
+            margin: 10px;
+            padding: 10px;
+        }
+        .special h3{
+
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <section>
+            <h3>Dom Explorer</h3>
+            <p id="first">first <span style="background-color:black;">Lorem, ipsum.</span> paragraph</p>
+            <p>second paragraph</p>
+            <p>third paragraph</p>
+        </section>
+        <section>
+            <article id="first-article">
+                <h3 title="secondBest">article-1</h3>
+                <p class="author">author-1</p>
+                <p class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores modi nihil iure quisquam harum numquam vel quaerat eum aut perspiciatis. At dicta deleniti quod natus molestias sequi culpa fuga quia?</p>
+            </article>
+            <article class="special">
+                <h3>article-2</h3>
+                <p title="I am the best writer" class="author" id="bestSeller">author-2</p>
+                <p class="description">Officia eveniet exercitationem repellendus quis quia nobis culpa iure doloribus? Doloribus veritatis perferendis laudantium adipisci, culpa, nostrum dignissimos, animi aut enim consectetur impedit vero nulla? Sint reiciendis eos commodi animi?</p>
+            </article>
+            <article class="special">
+                <h3>article-3</h3>
+                <p class="author">author-3</p>
+                <p class="description">Nemo facere beatae rerum provident esse laborum qui, dolorum, laboriosam distinctio ullam, maiores ipsam tenetur officiis! Animi enim consequatur ducimus expedita! Nobis rem inventore cupiditate magnam saepe distinctio neque voluptas.</p>
+            </article>
+            <article>
+                <ul id="address">
+                    <li>gift item-1</li>
+                    <li>gift item-2</li>
+                    <li>gift item-3</li>
+                    <li>gift item-4</li>
+                    <li>gift item-5</li>
+                </ul>
+            </article>
+        </section>
+    </main>
+    <script>
+        var article = document.getElementById('first-article');
+        var newParagraph = document.createElement('p');
+        newParagraph.innerHTML = "Newly added by javascript";
+        article.appendChild(newParagraph);
+        const ul = document.getElementById('address');
+        const li = document.createElement('li');
+        li.innerHTML = "Nose pin";
+        ul.appendChild(li);
+    </script>
+</body>
+</html>
